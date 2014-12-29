@@ -1,0 +1,13 @@
+//-experience template
+template(name='experience')
+  .section(name='experience')
+    .secName EXPERIENCE
+    //Calling the data retrieved by the experiences – Meteor collection – function defined in template.experience.helpers
+    each experiences
+      +cvFields
+      +hideRemoveBtn
+  
+//-input template
+template(name='experienceInput')
+  //shows the input form only when logged in
+  +input

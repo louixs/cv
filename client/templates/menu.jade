@@ -1,0 +1,7 @@
+template(name='menu')
+  a(class="item {{activeIfTemplateIs 'cv'}}" href="{{pathFor 'cv'}}")
+    i.book.icon
+    | CV
+  a(class="item {{activeIfTemplateIs 'about'}}" href="{{pathFor 'about'}}")
+    i.mail.icon
+    | About

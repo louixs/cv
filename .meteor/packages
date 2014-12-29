@@ -1,0 +1,31 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+coffeescript
+mquandalle:jade
+mrt:reactive-coffee
+accounts-ui
+accounts-password
+jquery
+natestrauser:font-awesome
+natestrauser:animate-css
+mizzao:bootstrap-3
+meteorhacks:fast-render
+mquandalle:stylus
+iron:router
+accounts-base
+accounts-github
+accounts-facebook
+accounts-google
+accounts-twitter
+linto:jquery-ui
+nooitaf:semantic-ui
+dessix:livescript-compiler
+classcraft:meteor-wkhtmltopdf
+meteorhacks:npm
+
+
+npm-container
