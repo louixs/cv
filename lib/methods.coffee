@@ -11,7 +11,7 @@ Meteor.methods
       owner: Meteor.userId()
       username: Meteor.user().username
 
-  addInput: (addInputCollectionName,title,start,end,where,desc) ->
+  addInput: (addInputCollectionName,title,start,end,where,desc,category) ->
   #throw new Meteor.Error("not-authorized") unless Meteor.userId()
   #Using global[var] makes it possible to define the name of collection dynamically!
   #found it here http://stackoverflow.com/questions/26661498/mongo-insert-inside-of-a-meteor-method
@@ -21,6 +21,7 @@ Meteor.methods
       end: end
       where: where
       desc: desc
+      category: category
       createdAt: new Date() #current time
       owner: Meteor.userId() # _id of logged in user
       username: Meteor.user().username # username of logged in user

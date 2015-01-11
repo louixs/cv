@@ -18,6 +18,13 @@ Router.route 'cv', {
   template: 'cv'
   }
 
+Router.route 'cvBody', {
+  name: 'cvBody',
+  path: '/cvBody'
+  template: 'cvBody'
+  }
+
+
 Router.route 'about', {
   name: 'about',
   path: '/about'

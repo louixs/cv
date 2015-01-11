@@ -1,0 +1,15 @@
+//-experience template
+template(name='cvBody')
+  .section(name='cvBody')
+  
+    +input
+  
+    .secName EXPERIENCE
+    //Calling the data retrieved by the experiences – Meteor collection – function defined in template.experience.helpers
+    each experience
+      +cvFields
+    
+    .secName Education
+    //Calling the data retrieved by the experiences – Meteor collection – function defined in template.experience.helpers
+    each education
+      +cvFields
