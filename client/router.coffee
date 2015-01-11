@@ -23,3 +23,9 @@ Router.route 'about', {
   path: '/about'
   template: 'about'
   }
+
+Router.route 'myBlogIndex', {
+  name: 'blog',
+  path: '/blog'
+  template: 'myBlogIndex'
+  }

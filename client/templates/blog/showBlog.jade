@@ -1,0 +1,7 @@
+template(name='myShowBlog')
+  h1 1 2 blog!
+  +blogShow
+  
+  if currentUser
+    a(href='/admin/blog') Edit blog
+    

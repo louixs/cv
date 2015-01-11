@@ -3,5 +3,8 @@ template(name='menu')
     i.book.icon
     | CV
   a(class="item {{activeIfTemplateIs 'about'}}" href="{{pathFor 'about'}}")
-    i.mail.icon
+    i.info.icon
     | About
+  a(class="item" href="/blog")
+    i.cube.icon
+    | Blog

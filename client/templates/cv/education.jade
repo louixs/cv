@@ -1,0 +1,32 @@
+//-education template
+template(name='education')
+  .section(name='education')
+    .secName EDUCATION
+    
+    each education
+      .set
+        .secHeader 
+          .title: p.editable #{title}
+          .duration: p.editable
+            .start: p.editable #{start} 
+            .hyphen –
+            .end: p.editable #{end}
+        .where: p.editable #{where}
+        .desc: p.editable #{desc}
+        
+      if currentUser and owner
+        .button-group.editMode
+          button(class='btn btn-hide') Hide
+          button(class='btn btn-remove') Remove
+//-input template
+template(name='educationInput')
+  //shows the input form only when logged in
+  if currentUser and owner
+    form(class='new-education editMode')
+      .input-group
+        input(class='form-control' type='text' name='title' placeholder='Type the title')
+        input(class='form-control' type='text' name='start' placeholder='Start date')
+        input(class='form-control' type='text' name='end' placeholder='End date')
+        input(class='form-control' type='text' name='where' placeholder='Where?')
+        textarea(class='form-control' type='text' name='desc' placeholder='Description' id='desc' class='editable')
+        input(class='form-control' type='submit' value='submit')

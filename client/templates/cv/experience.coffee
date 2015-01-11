@@ -3,7 +3,7 @@
 #############################
 Meteor.subscribe 'experiences'
 
-collectionName = 'Experiences'
+@collectionName = 'Experiences'
 ###
 Template.experience.helpers
   isOwner: ->
@@ -17,36 +17,6 @@ Template.experience.helpers
     # 1 is ascending; -1 is descending
       sort:
         start: -1
-
-# Send the input data to the mongo collection experience
-Template.experienceInput.events
-  "submit .new": (e) ->
-    # Get the text from the title form
-    #calling the method from class submitValues
-
-    getValue = (x) ->
-      sel = e.target
-      x = sel.x.value
-
-    #refactor?
-    title = e.target.title.value
-    start = e.target.start.value
-    end = e.target.end.value
-    where = e.target.where.value
-    desc = e.target.desc.value
-
-    # Insert the input text to the db
-    Meteor.call "addInput", 'Experiences', title, start, end, where, desc
-
-  # Clear the form
-    e.target.experienceInput.value('')
-
-  # Prevent default form submit
-    false
-
-### Editable text on click ###
-# Saving the edit: doubleclick, click enter or esc key
-# event.which shorthand and key variables
 
 Template.experience.events
   #hide button - hide the each row section when clicked
@@ -64,7 +34,7 @@ Template.experience.events
     e.preventDefault()
     # confirm - modal dialog, use bootbox: mizzao:bootboxjs
     docId = @_id
-    console.log 'on app coffee '+docId
+  
     #calling the function that checks if the current
     #user is owner of the document
     checkDocOwner(Experiences, docId)
