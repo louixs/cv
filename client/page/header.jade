@@ -1,0 +1,12 @@
+template(name='header')
+  
+  .ui.green.inverted.pointing.menu
+    .item
+      +loginButtons
+        if currentUser
+          +users
+    
+    +menu
+    
+    .right.menu
+      +buttons

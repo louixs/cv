@@ -1,0 +1,11 @@
+template(name='input')
+  if currentUser and owner
+    form(class='new editMode')
+      .input-group
+        input(class='form-control' type='text' name='title' placeholder='Type the title')
+        input(class='form-control' type='text' name='start' placeholder='Start date; if appropriate, only year.')
+        input(class='form-control' type='text' name='end' placeholder='End date; if not applicable leave it blank')
+        input(class='form-control' type='text' name='where' placeholder='Where? i.e. place')
+        textarea(class='form-control' type='text' name='desc' placeholder='Description; or list of languages, skills' id='desc' class='editable')
+        input(class='form-control' type='text' name='category' placeholder='Category? e.g. experience, education, languages, skills, awards...')
+        input(class='form-control' type='submit' value='submit')
