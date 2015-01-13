@@ -1,13 +1,13 @@
 ##cv body
-#refactoring
+#further refactoring needed?
 Meteor.subscribe 'cv'
 
-@collectionName = 'CV'
+collectionName = 'CV'
 
 Template.cvBody.helpers
   experience: ->
     CV.find {category:'experience'},
-    # find the database: experiences
+    # find the data belonging to the category experiences
     # show the newest experience first
     # 1 is ascending; -1 is descending
       sort:
@@ -15,38 +15,26 @@ Template.cvBody.helpers
 
   education: ->
     CV.find {category:'education'},
-    # find the database: experiences
-    # show the newest experience first
-    # 1 is ascending; -1 is descending
       sort:
         start: -1
 
+  languages: ->
+    CV.find {category:'languages'},
+      sort:
+        start: -1
+
+  skills: ->
+    CV.find {category:'skills'},
+      sort:
+        start: -1
+
+  awards: ->
+    CV.find {category:'awards'},
+      sort:
+        start: -1
+
+
 Template.cvBody.events
-  #hide button - hide the each row section when clicked
-  'click .btn.btn-hide': (e) ->
-    e.preventDefault()
-    console.log 'hide button hit'
-    $(e.target).parent().prev().toggle('fade')
-    if $(@).text() is 'Hide'
-      $(e.target).text('Show')
-    else
-      $(e.target).text('Hide')
-
-  #delete button
-  'click .btn.btn-remove': (e) ->
-    e.preventDefault()
-    # confirm - modal dialog, use bootbox: mizzao:bootboxjs
-    docId = @_id
-
-    #calling the function that checks if the current
-    #user is owner of the document
-    checkDocOwner(CV, docId)
-    if confirm 'Are you sure?'
-      Meteor.call 'removeDoc', collectionName, docId
-      console.log 'remove successful'
-    else
-      console.log 'not removed',
-
     #double click to edit the .editable content
   'click .editable': (e) ->
     e.preventDefault()
@@ -88,23 +76,7 @@ Template.cvBody.events
 
     switch typed
       when shift and enter
-        ###
-        Meteor.call 'updateEditable',
-          collectionName,
-          docId,
-          fieldName,
-          editedValue,
-          (error, id) ->
-            if error
-              console.log error.reason
-            else
-              console.log 'update successful'
-
-        thisObj.removeClass('editing')
-        thisObj.attr('contenteditable', false)
-        thisObj.addClass('edited')
-        e.preventDefault()
-        ###
+        reutur
       when enter or esc
         e.preventDefault()
         console.log('updating the text you are editing for '+docId)

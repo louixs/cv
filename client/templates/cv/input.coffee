@@ -1,7 +1,7 @@
 # Send the input data to the mongo collection experience
-
 Template.input.events
   "submit .new": (e) -> #refactor?
+    collectionName = 'CV'
 
     title = e.target.title.value
     start = e.target.start.value
@@ -11,7 +11,7 @@ Template.input.events
     category = e.target.category.value
 
     # Insert the input text to the db
-    Meteor.call "addInput", 'CV', title, start, end, where, desc, category
+    Meteor.call "addInput", collectionName, title, start, end, where, desc, category
 
     # Clear the form
     e.target.input.value('')

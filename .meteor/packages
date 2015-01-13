@@ -6,7 +6,6 @@
 meteor-platform
 coffeescript
 mquandalle:jade
-mrt:reactive-coffee
 accounts-ui
 accounts-password
 jquery
@@ -24,11 +23,13 @@ accounts-twitter
 linto:jquery-ui
 nooitaf:semantic-ui
 dessix:livescript-compiler
-classcraft:meteor-wkhtmltopdf
 meteorhacks:npm
 
 
-npm-container
 reactive-var
 d3js:d3
 ryw:blog
+ongoworks:pdf
+
+
+npm-container

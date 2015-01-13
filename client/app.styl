@@ -1,6 +1,8 @@
 @import "../.import/fonts"
+@import "../.import/cvPrint"
 @import 'jeet'
 @import 'nib'
+
 global-reset()
 reset-html5()
 
@@ -77,11 +79,11 @@ section
   margin-top 0.2em
   font 1.3em $sec_font
   color #009999
+  border-bottom 1px solid #bbbbbb
 
 .secHeader
   span(1/1)
   margin-top 0.8em
-  border-bottom 1px solid #bbbbbb
 
 .title
   span(8/10)
@@ -108,6 +110,9 @@ section
     durationStyle(1/5,center)
   .end
     durationStyle(2/5,right)
+  //Styling specific to awards temp; doesn't seem to be optimal solution; rethink
+  .awards.end
+    durationStyle(1/1, right)
 
 .where
   pac()
@@ -121,6 +126,8 @@ section
   margin-top 0.4em
   margin-left 1em
   text-align left
+
+//styling for years in awards template
 
 //footer
 footer
