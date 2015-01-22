@@ -1,7 +1,10 @@
 template(name='myShowBlog')
-  h1 1 2 blog!
-  +blogShow
-  
-  if currentUser
-    a(href='/admin/blog') Edit blog
-    
+  .ui.raised.segment.blogPost
+    +blogShow
+    +disqus this
+    if currentUser
+      .ui.button
+        a(href='/admin/blog')
+          i.write.square.icon
+          | Edit blog
+      

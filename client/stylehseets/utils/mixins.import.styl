@@ -1,0 +1,22 @@
+/*Mixin to remove underlines
+*and blue color from links
+*'a', for print and PDF
+*/
+no_deco() //no decoration for a
+  a
+    text-decoration none
+    color inherit
+
+rel() //short hand for position relative
+  position relative
+
+//section package
+pac()
+  font 0.9em $pac_font
+  font-weight bold
+
+//common property for address
+addressPos(shiftValue, textAlign)
+  span(1/2)
+  shift(shiftValue, span)
+  text-align textAlign

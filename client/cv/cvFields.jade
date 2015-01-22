@@ -3,9 +3,10 @@ template(name='cvFields')
     .secHeader
       .title: p #{title}
       .duration: p
-        .start: p #{start} 
-        .hyphen: p –
-        .end: p #{end}
-    .where: p #{where}
+        .ui.purple.right.ribbon.label
+          .start: p #{start} 
+          .hyphen: p –
+          .end: p #{end}
+    .where #{where}
     .desc: p #{desc}
   +hideRemoveBtn

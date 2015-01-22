@@ -1,0 +1,18 @@
+template(name='inputButton')
+  //!button
+  .ui.input.green.button
+    i.plus.icon 
+    | Add
+  
+  //modal components
+  .ui.long.input.modal
+    i.close.icon
+    .header
+      | Add Input
+    .content
+      .description
+        | Enter info
+        +inputFields
+        
+    .actions
+      .ui.button Cancel

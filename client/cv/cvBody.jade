@@ -2,26 +2,41 @@
 //This looks quite repetitive, perhaps additional refactoring is needed
 template(name='cvBody')
   .section(name='cvBody')
-    //Input field for cv data input
-    +input
-  
-    .secName EXPERIENCE
-    //Calling the data retrieved by the experiences – Meteor collection – function defined in template.experience.helpers
+    .secName
+      i.world.icon
+      | Experience
+    //Calling the data retrieved by the experiences
+    //– Meteor collection – function defined in
+    //template.experience.helpers
     each experience
       +cvFields
     
-    .secName Education
+    .secName
+      i.book.icon
+      | Education
     each education
       +cvFields
     
-    .secName Languages
+    .secName
+      i.comments.outline.icon
+      | Languages
     each languages
       +cvFieldsSkills
     
-    .secName Skills
+    .secName
+      i.archive.icon
+      | Skills
     each skills
       +cvFieldsSkills
+  
+    .secName
+        i.trophy.icon
+        | Awards
+      each awards
+        +cvFieldsAwards
     
-    .secName Awards
-    each awards
-      +cvFieldsAwards
+    .secName
+      i.gift.icon
+      | Interests
+    each interests
+      +cvFieldsSkills

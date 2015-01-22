@@ -1,0 +1,76 @@
+article.cv
+  //edit()
+  no_deco()
+  center(max-width = 800px)
+  font 100% $body_font
+  line-height 1.45em
+  margin 2em auto
+
+//The CV header
+section.cvHeader
+  #name
+    text-align center
+    font 1.5em $big_font
+    margin 1% 0% 3% 0%
+  #address_right
+    addressPos(1/2, right)
+  #address_left
+    addressPos(-1/2, left)
+
+//General styling for sections
+section
+  rel()
+  span(1/1)
+
+.secName
+  span(1/1)
+  margin-top 0.3em
+  font 1.2em $sec_font
+  color #009999
+  border-bottom 1px solid #bbbbbb
+
+.secHeader
+  span(1/1)
+  margin-top 0.8em
+
+.title
+  span(8/10)
+  font 1.1em $pac_font
+
+.ribbon.label
+  font 0.7em $mono_font
+
+.duration
+  span(2/10)
+  color #666666
+
+  //mixin for the duration section
+  durationStyle(spanSize, align)
+    span(spanSize)
+    text-align align
+
+  .start
+    durationStyle(2/5,left)
+  .hyphen
+    durationStyle(1/5,center)
+  .end
+    durationStyle(2/5,right)
+  //Styling specific to awards temp; doesn't seem to be optimal solution; rethink
+  .awards.end
+    durationStyle(1/1, right)
+
+.where
+  span(8/10)
+  //margin-top -0.7em
+  font 0.7em $pac_font
+  color #666666
+  text-transform uppercase
+
+.desc, .course
+  span(1/1)
+  rel()
+  //show line break
+  white-space pre-line
+  margin-top 0.4em
+  margin-left 1em
+  text-align left

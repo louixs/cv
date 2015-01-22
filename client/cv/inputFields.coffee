@@ -1,6 +1,6 @@
 # Send the input data to the mongo collection experience
-Template.input.events
-  "submit .new": (e) -> #refactor?
+Template.inputFields.events
+  "submit form": (e) -> #refactor?
     collectionName = 'CV'
 
     title = e.target.title.value

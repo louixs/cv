@@ -5,6 +5,7 @@ Meteor.subscribe 'cv'
 collectionName = 'CV'
 
 Template.cvBody.helpers
+
   experience: ->
     CV.find {category:'experience'},
     # find the data belonging to the category experiences
@@ -30,6 +31,11 @@ Template.cvBody.helpers
 
   awards: ->
     CV.find {category:'awards'},
+      sort:
+        start: -1
+
+  interests: ->
+    CV.find {category:'interests'},
       sort:
         start: -1
 

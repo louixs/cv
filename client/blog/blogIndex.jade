@@ -1,6 +1,11 @@
 template(name='myBlogIndex')
-  h1 Ryuei's blog
-  +blogIndex
-  
-  if currentUser
-    a(href='/admin/blog') Edit blog
+  .ui.raised.segment.blog
+    h1.ui.header  Ryuei's blog
+      
+    +blogIndex
+
+    if currentUser
+      .ui.green.button
+        a(href='/admin/blog')
+          i.write.square.icon
+          |Edit blog

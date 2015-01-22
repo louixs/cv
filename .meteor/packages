@@ -17,9 +17,6 @@ mquandalle:stylus
 iron:router
 accounts-base
 accounts-github
-accounts-facebook
-accounts-google
-accounts-twitter
 linto:jquery-ui
 nooitaf:semantic-ui
 dessix:livescript-compiler
