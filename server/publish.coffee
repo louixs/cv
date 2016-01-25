@@ -1,5 +1,5 @@
 #############################
-##### Server-side start #####
+##### Server-side starts #####
 #############################
 Meteor.publish 'cv', ->
   CV.find()

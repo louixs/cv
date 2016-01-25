@@ -1,5 +1,7 @@
 template(name='layout')
-  +header
-  .container
+  header
+    +yield('header')
+  .ui.container
     +yield
-  +footer
+  footer
+    +yield('footer')

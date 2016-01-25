@@ -4,13 +4,13 @@ Template.editButton.events
     $('.editMode, .editInfo').toggle (=>
       $(@).show()), =>
       $(@).hide()
-      
+
     $('.long.edit.modal')
       .modal(
         onDeny: ->
           console.log 'canceled'
           return false
-        ,
+
         onApprove : ->
           console.log 'pressed ok'
       )

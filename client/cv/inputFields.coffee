@@ -14,7 +14,7 @@ Template.inputFields.events
     Meteor.call "addInput", collectionName, title, start, end, where, desc, category
 
     # Clear the form
-    e.target.input.value('')
+    #e.target.input.value('')
 
     # Prevent default form submit
     false

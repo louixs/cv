@@ -1,6 +1,6 @@
-##########################
-##### Methods starts #####
-##########################
+#################################
+##### Methods section start #####
+#################################
 Meteor.methods
 
   # For adding inputs from experiences, and education
@@ -41,10 +41,13 @@ Meteor.methods
   removeDoc: (removeCollectionName, docId) ->
     global[removeCollectionName].remove docId
 
-  ########################
-  ##### Methods ends #####
-  ########################
+  ################################
+  ##### Methods section ends #####
+  ################################
 
+#########################
+## PDF Export feature - Still in progress ###
+#########################
 if Meteor.isServer
   Meteor.methods
     pdf: (site, output) ->

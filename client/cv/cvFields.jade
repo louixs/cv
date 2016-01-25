@@ -8,5 +8,8 @@ template(name='cvFields')
           .hyphen: p –
           .end: p #{end}
     .where #{where}
+    
+    // Caution about line break: 
+    //It only works when a line break is entered with Shift + Enter when submitting a desc data to collection but not when you insert a line break when editing the desc text
     .desc: p #{desc}
   +hideRemoveBtn
